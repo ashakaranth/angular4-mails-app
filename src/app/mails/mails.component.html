@@ -1,0 +1,21 @@
+<div id="mail-component">
+  <div class="mails-sidebar-wrap" style="float:left;width:20%">
+    <div
+      *ngFor="let mail of newMails"
+      class="mail-list-wrap"
+      routerLinkActive="active-link"
+    >
+      <div class="mail-heading">
+        <a routerLink="{{ mail.id }}" (click)="updateMailView(mail.id)">{{
+          mail.title
+        }}</a>
+        <div class="notice" style="font-size:8px;color:red;">
+          {{ mail.isImp }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="width:40%;border:1px solid #eee;float:left;padding:20px;">
+    <app-mail [mailId]="name" (impMarkOutput)="markAsImp($event)"></app-mail>
+  </div>
+</div>

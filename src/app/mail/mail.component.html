@@ -1,0 +1,13 @@
+<div class="mail-title">
+  <h3
+    style="text-transform: capitalize;color:#666;font-size: 20px;border-bottom:1px solid #eee;"
+  >
+    {{ mail?.title }}
+  </h3>
+</div>
+<div class="mail-body">{{ mail?.body }}</div>
+<div class="mail-footer">
+  <button class="imp-button btn btn-primary" (click)="markAsImportant()">
+    Mark As Important
+  </button>
+</div>
